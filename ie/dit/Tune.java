@@ -6,10 +6,10 @@ private String title;
 private String altTitle;
 private String notation;
 
-public Tune(int x , String title , String altTitle , String notation){
-  //this.x = x;
-  //this.title = title;
-  //this.altTitle = altTitle;
+public Tune(int x , String title , String altTitle){
+  this.x = x;
+  this.title = title;
+  this.altTitle = altTitle;
   //this.notation=notation;
 }
 
@@ -29,6 +29,11 @@ public int getX(String l){
 //}
 
 public String getTitle(String l){
+  String temp="";
+  if(l.startsWith("T:")){
+    temp = l.substring(2);
+  }
+  title = temp;
   return title;
 }
 
@@ -37,6 +42,11 @@ public String getTitle(String l){
 //}
 
 public String getAltTitle(String l){
+  String temp="";
+  if(l.startsWith("T:")){
+    temp = l.substring(2);
+  }
+  altTitle = temp;
   return altTitle;
 }
 
