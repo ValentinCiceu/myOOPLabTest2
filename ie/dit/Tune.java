@@ -38,6 +38,13 @@ public String getNotaion(){
 //public void setNotaion(){
 
 //}
-
+public String toString(){
+  if( getTitle() == null){
+    return getX() + ", " + getTitle();
+  }
+  else{
+    return getX() + ", " + getTitle() + ", " + getAltTitle();
+  }
+}
 
 }//end of class
