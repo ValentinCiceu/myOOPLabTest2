@@ -6,15 +6,29 @@ private String title;
 private String altTitle;
 private String notation;
 
+public Tune(int x , String title , String altTitle , String notation){
+  //this.x = x;
+  //this.title = title;
+  //this.altTitle = altTitle;
+  //this.notation=notation;
+}
+
 //setting up the accessor methods
-public int getX(){
+public int getX(String l){
+  //take the Tag X:
+  //and remove it (parse it) leaving only the number behind'
+  String temp;
+  if(l.startsWith("X:")){
+    temp = l.substring(2);
+    x = Integer.parseInt(temp);
+  }
   return x;
 }
 //public void setX(int num){
 
 //}
 
-public String getTitle(){
+public String getTitle(String l){
   return title;
 }
 
@@ -22,7 +36,7 @@ public String getTitle(){
 
 //}
 
-public String getAltTitle(){
+public String getAltTitle(String l){
   return altTitle;
 }
 
@@ -31,20 +45,20 @@ public String getAltTitle(){
 
 //}
 
-public String getNotaion(){
+public String getNotaion(String l){
   return notation;
 }
 
 //public void setNotaion(){
 
 //}
-public String toString(){
-  if( getTitle() == null){
-    return getX() + ", " + getTitle();
-  }
-  else{
-    return getX() + ", " + getTitle() + ", " + getAltTitle();
-  }
-}
+// public String toString(){
+//   if( getTitle() == null){
+//     return getX() + ", " + getTitle();
+//   }
+//   else{
+//     return getX() + ", " + getTitle() + ", " + getAltTitle();
+//   }
+// }
 
 }//end of class
